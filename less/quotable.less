@@ -1,3 +1,4 @@
+
 @import "less/lib/bootstrap/bootstrap";
 @import "less/lib/font-awesome/font-awesome";
 @import "less/medium";
@@ -146,6 +147,11 @@ canvas {
     color: @text-color;
 
     &.poster-theme1 {
+        .quote-mark{
+            background-image: @quote-path;
+            border-color: @bg-color;
+            background-color: @bg-color;
+        }
         .logo-wrapper {
             background-image: @logo-path;
             background-repeat: no-repeat;
@@ -164,6 +170,11 @@ canvas {
     &.poster-theme2 {
         background: @theme2-bg-color;
         color: @theme2-text-color;
+        .quote-mark{
+            background-image: @theme2-quote-path;
+            border-color: @theme2-bg-color;
+            background-color: @theme2-bg-color;
+        }
         .logo-wrapper {
             background: @theme2-bg-color;
             color: @theme2-text-color;
@@ -179,8 +190,11 @@ canvas {
                 height: @theme2-16x9-logo-height + @padding;
             }
         }
-        .show-credit {
+        .show-credit, .quote-borders, p.source {
             color: @theme2-credit-color;
+        }
+        hr.quote-borders{
+            border-color: @theme2-credit-color;
         }
     }
 
@@ -188,6 +202,11 @@ canvas {
     &.poster-theme3 {
         background: @theme3-bg-color;
         color: @theme3-text-color;
+        .quote-mark{
+            background-image: @theme3-quote-path;
+            border-color: @theme3-bg-color;
+            background-color: @theme3-bg-color;
+        }
         .logo-wrapper {
             background: @theme3-bg-color;
             color: @theme3-text-color;
@@ -203,14 +222,22 @@ canvas {
                 height: @theme3-16x9-logo-height + @padding;
             }
         }
-        .show-credit {
+        .show-credit, .quote-borders, p.source {
             color: @theme3-credit-color;
+        }
+        hr.quote-borders{
+            border-color: @theme3-credit-color;
         }
     }
 
     &.poster-theme4 {
         background: @theme4-bg-color;
         color: @theme4-text-color;
+        .quote-mark{
+            background-image: @theme4-quote-path;
+            border-color: @theme4-bg-color;
+            background-color: @theme4-bg-color;
+        }
         .logo-wrapper {
             background: @theme4-bg-color;
             color: @theme4-text-color;
@@ -226,8 +253,11 @@ canvas {
                 height: @theme4-16x9-logo-height + @padding;
             }
         }
-        .show-credit {
+        .show-credit, .quote-borders, p.source {
             color: @theme4-credit-color;
+        }
+        hr.quote-borders{
+            border-color: @theme4-credit-color;
         }
     }
 
@@ -290,7 +320,7 @@ canvas {
         border-left: none;
         font-size: inherit;
         line-height: 100%;
-        font-weight: bold;
+        font-style: italic;
         display: block;
 
         &:focus {
@@ -329,18 +359,33 @@ canvas {
 
     p.source {
         font-size: @base-font-size * 1.5;
-        font-weight: normal;
+        font-family: Lato;
+        font-weight: bold;
         line-height: 1.3;
         display: block;
         margin-top: 0;
+        text-align: center;
+        color: @credit-color;
+
     }
 
     .show-credit {
         display: block;
         text-transform: uppercase;
-        font-size: @base-font-size * 1.2;
+        font-family: Lato;
+        font-size: @base-font-size;
+        text-align: center;
         margin-top: @credit-margin;
         color: @credit-color;
+    }
+
+    .quote-borders{
+        background-color: @credit-color;
+    }
+    hr.quote-borders{
+        border: 1px solid;
+        border-color: @credit-color;
+        margin-bottom: 50px;
     }
 
     p.source,
@@ -350,13 +395,25 @@ canvas {
             outline: none;
         }
     }
-
+    .quote-mark{
+        width: 80px;
+        height: 78px;
+        background-image: @quote-path;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: @bg-color;
+        border: 20px solid;
+        border-color: @bg-color;
+        margin: 0 auto;
+        margin-top: -94px;
+        margin-bottom: 11px;
+    }
     .logo-wrapper {
         position: absolute;
         width: 100%;
         z-index: 100;
         bottom: 0;
-        right: 0;
+        left: 50px;
         text-align: right;
         padding:  @padding @padding * 2 @padding * 2;
         margin: 0;

@@ -83,7 +83,7 @@ function saveImage() {
 
     // make sure source begins with em dash
     if (!$source.text().match(/^[\u2014]/g)) {
-        $source.html('&mdash;&thinsp;' + $source.text());
+        $source.html($source.text());
     }
 
     $('canvas').remove();
@@ -137,7 +137,7 @@ $(function() {
         adjustFontSize(quote.size);
     }
     $('blockquote p').text(quote.quote);
-    $source.html('&mdash;&thinsp;' + quote.source);
+    $source.html(quote.source);
     processText();
 
     $save.on('click', saveImage);
