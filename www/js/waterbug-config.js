@@ -5,26 +5,19 @@ var elementPadding = 40; // padding around the logo and credit text
 // logo configuration
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
-    'default': {
-        whitePath: '../img/urban_grid_blue_trans.svg', // path to white logo
-        // blackPath: '../img/icon-lunchbox-black.svg', // path to black logo
-        w: 250, // width of logo
-        h: 150, // height of logo
-        display: 'Default'
+    'oneColor': {
+        whitePath: '../img/urban_grid_rev.svg', // path to white logo
+        blackPath: '../img/urban_grid_black.svg', // path to black logo
+        w: 180, // width of logo
+        h: 108, // height of logo
+        display: 'One color'
     },
-    'oneLine': {
-        whitePath: '../img/urban_one-line.svg',
-        // blackPath: '../img/icon-socializr-black.svg',
-        w: 318,
-        h: 13,
-        display: 'One Line'
-    },
-    'full': {
-        whitePath: '../img/urban_grid_elevate_blue_trans.svg',
-        blackPath: '../img/urban_grid_elevate_black_trans.svg',
-        w: 550,
-        h: 150,
-        display: 'Full'
+    'twoColor': {
+        whitePath: '../img/urban_grid_blue_rev.svg',
+        blackPath: '../img/urban_grid_blue_white.svg',
+        w: 180,
+        h: 108,
+        display: 'Two color'
     }
 };
 
@@ -42,7 +35,7 @@ var fontShadowOffsetY = 0; // font shadow offset y
 var fontShadowBlur = 10; // font shadow blur
 
 // copyright options
-var orgName = 'The Urban Institute';
+var orgName = 'Urban Institute';
 var freelanceString = 'for ' + orgName;
 
 var copyrightOptions = {
@@ -70,14 +63,6 @@ var copyrightOptions = {
         source: 'AP',
         display: 'AP' 
     },
-    'getty': {
-        showPhotographer: true,
-        showSource: false,
-        photographerRequired: false,
-        sourceRequired: false,
-        source: 'Getty Images',
-        display: 'Getty' 
-    },
     'thirdParty': {
         showPhotographer: true,
         showSource: true,
@@ -90,7 +75,7 @@ var copyrightOptions = {
 
 // app load defaults
 var currentCrop = 'twitter'; // default crop size
-var currentLogo = 'default'; // default logo slug
+var currentLogo = 'oneColor'; // default logo slug
 var currentLogoColor = 'white'; // default logo color
 var currentTextColor = 'white'; // default text color
 var defaultImage = '../img/test-kitten.jpg'; // path to image to load as test image

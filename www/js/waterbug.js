@@ -31,7 +31,7 @@ var dx = 0;
 var image;
 var imageFilename = 'image';
 var currentCopyright;
-var credit = 'Belal Khan/Flickr'
+var credit = 'Belal Khan :: Flickr'
 var shallowImage = false;
 
 
@@ -253,12 +253,14 @@ var renderCanvas = function() {
 var buildCreditString = function() {
     var creditString;
     var val = $copyrightHolder.val();
-
     if ($photographer.val() !== '') {
-        if (copyrightOptions[val]['source']) {
-            creditString = $photographer.val() + '/' + copyrightOptions[val]['source'];
+        if(val == "freelance"){
+            creditString = $photographer.val() + ' ' + copyrightOptions[val]['source'];
+        }
+        else if (copyrightOptions[val]['source']) {
+            creditString = $photographer.val() + ' :: ' + copyrightOptions[val]['source'];
         } else {
-            creditString = $photographer.val() + '/' + $source.val();
+            creditString = $photographer.val() + ' :: ' + $source.val();
         }
     } else {
         if (copyrightOptions[val]['source']) {
