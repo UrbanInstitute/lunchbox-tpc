@@ -5,37 +5,30 @@ var elementPadding = 40; // padding around the logo and credit text
 // logo configuration
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
-    'oneColor': {
-        whitePath: '../img/urban_grid_rev.svg', // path to white logo
-        blackPath: '../img/urban_grid_black.svg', // path to black logo
-        w: 180, // width of logo
-        h: 108, // height of logo
-        display: 'One color'
-    },
     'twoColor': {
-        whitePath: '../img/urban_grid_blue_rev.svg',
-        blackPath: '../img/urban_grid_blue_white.svg',
-        w: 180,
-        h: 108,
-        display: 'Two color'
+        whitePath: '../img/TPC_short_color_opaque.svg',
+        blackPath: '../img/TPC_short_color_opaque.svg',
+        w: 153,
+        h: 131,
+        display: 'Full Color'
     }
 };
 
 // logo opacity for colors
-var whiteLogoAlpha = '0.8';
-var blackLogoAlpha = '0.6';
+var whiteLogoAlpha = '1';
+var blackLogoAlpha = '1';
 
 // type
 var fontWeight = 'normal'; // font weight for credit
 var fontSize = '20pt'; // font size for credit
-var fontFace = "Lato"; // font family for credit
+var fontFace = "Avenir"; // font family for credit
 var fontShadow = 'rgba(0,0,0,0.7)'; // font shadow for credit
 var fontShadowOffsetX = 0; // font shadow offset x
 var fontShadowOffsetY = 0; // font shadow offset y
 var fontShadowBlur = 10; // font shadow blur
 
 // copyright options
-var orgName = 'Urban Institute';
+var orgName = 'Tax Policy Center';
 var freelanceString = 'for ' + orgName;
 
 var copyrightOptions = {
@@ -75,7 +68,7 @@ var copyrightOptions = {
 
 // app load defaults
 var currentCrop = 'twitter'; // default crop size
-var currentLogo = 'oneColor'; // default logo slug
+var currentLogo = 'twoColor'; // default logo slug
 var currentLogoColor = 'white'; // default logo color
 var currentTextColor = 'white'; // default text color
 var defaultImage = '../img/test-kitten.jpg'; // path to image to load as test image

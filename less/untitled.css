@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('AvenirLTPro-Roman.ttf')  format('truetype')
+}
+
+
+@font-face {
+  font-family: 'My Font';
+  src: ...;
+}
+@font-face {
+  font-family: 'My Other Font';
+  font-style: normal;
+  font-weight: normal; /* or 400 */
+  src: ...;
+}
+@font-face {
+  font-family: 'My Other Font';
+  font-style: italic;
+  font-weight: normal; /* or 400 */
+  src: ...;
+}
+@font-face {
+  font-family: 'My Other Font';
+  font-style: normal;
+  font-weight: bold; /* or 700 */
+  src: ...;
+}
