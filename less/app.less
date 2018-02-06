@@ -85,7 +85,7 @@ header {
         letter-spacing: 2px;
         margin: 0;
         -webkit-font-smoothing: antialiased;
-        font-family: @font-family;
+        font-family: Calvert;
 
         .home & {
             display: block;
@@ -282,11 +282,16 @@ header {
         font-weight: normal;
         letter-spacing: 0.1rem;
         color: #000;
+        font-family: Calvert;
 
         .tooltip {
             text-transform: none;
             letter-spacing: 0;
         }
+    }
+
+    label.btn {
+        font-family: Avenir !important;
     }
 
     .help { color: @gray-light; }
@@ -296,4 +301,12 @@ header {
     font-size: 12px;
     font-style: italic;
     margin-top: 6px;
+}
+
+#save {
+    display: none;
+}
+
+#logoColorDiv {
+    display: none;
 }

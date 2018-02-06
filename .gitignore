@@ -57,3 +57,6 @@ www/live-data/*
 
 # built apps
 electron
+
+# local assets and files 
+assets/
